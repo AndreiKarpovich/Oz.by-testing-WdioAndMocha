@@ -1,6 +1,6 @@
 # Oz.by-testing-WdioAndMocha
 
-Automated testing with WebdriverIO and Mocha.
+ Automation testing with WebdriverIO and Mocha.
 Case - https://oz.by/
 
 To start - npm install
