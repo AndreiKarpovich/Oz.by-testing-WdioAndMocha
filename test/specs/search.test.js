@@ -10,7 +10,7 @@ describe('Functionality check on search page', () => {
         await This.page.open('https://oz.by/')
         await This.header.search('javascript');
         const searchResult = await I.getText(This.searchList.searchListItem); 
-        expect(searchResult.toLowerCase()).toContain('javascript' && '22');
+        expect(searchResult.toLowerCase()).toContain('javascript' );
     });
     it('Check sorted by rayting', async () => {
         const firstSorting = await I.getText(This.searchList.sorting);
@@ -18,12 +18,12 @@ describe('Functionality check on search page', () => {
         const secondSorting = await I.getText(This.searchList.sorting);
         expecting(firstSorting).to.not.equal(secondSorting);   
      });
-    it('Filter search by price and check that the quantity of зкщвгсе has decreased', async () => {
+    it('Filter search by price and check that the quantity of product has decreased', async () => {
        await This.searchList.filterByPrice(60, 80);
        const searchResult = await I.getText(This.searchList.searchListItem); 
        expect(searchResult.toLowerCase()).toContain('javascript' && '4');   
     });
-    it('Check that first result from Serch list contain text "javascript"', async () => {
+    it('Check that first result from search list contain text "javascript"', async () => {
         const search = await I.getElementsArray(This.searchList.searchResults);
         await I.clickElementFromArray(search, 0);
         const productTitle = await I.getElementText(This.product.productTitle);

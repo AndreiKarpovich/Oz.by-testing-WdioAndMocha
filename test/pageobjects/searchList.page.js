@@ -24,17 +24,17 @@ class SearchList extends Page {
             $$(this.sortingAll)[0].click();      
         } else if (string === 'Популярность') {
             $$(this.sortingAll)[1].click();    
-            } else if (string === 'Дата поступления') {
-                $$(this.sortingAll)[2].click();    
-                } else if (string === 'Сначало дешевые') {
-                    $$(this.sortingAll)[3].click();    
-                        } else if (string === 'Сначало дорогие') {
-                            $$(this.sortingAll)[4].click();    
-                            } else if (string === 'Рейтинг') {
-                                $$(this.sortingAll)[5].click();    
-                                } else if (string === 'Алфавит') {
-                                    $$(this.sortingAll)[6].click();
-                                    };
+        } else if (string === 'Дата поступления') {
+            $$(this.sortingAll)[2].click();    
+        } else if (string === 'Сначало дешевые') {
+            $$(this.sortingAll)[3].click();    
+        } else if (string === 'Сначало дорогие') {
+            $$(this.sortingAll)[4].click();    
+        } else if (string === 'Рейтинг') {
+            $$(this.sortingAll)[5].click();    
+        } else if (string === 'Алфавит') {
+            $$(this.sortingAll)[6].click();
+        };
         await $(this.sorting).waitForClickable();
     }
 }

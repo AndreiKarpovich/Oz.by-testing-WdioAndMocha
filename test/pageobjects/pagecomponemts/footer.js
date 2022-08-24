@@ -14,19 +14,19 @@ class Footer extends Page {
             $$(this.socialLinks)[1].click();      
         } else if (link === 'vk') {
             $$(this.socialLinks)[0].click();    
-          } else if (link === 'facebook') {
+        } else if (link === 'facebook') {
             $$(this.socialLinks)[2].click();    
-            } else if (link === 't.me') {
-                $$(this.socialLinks)[3].click();    
-                } else if (link === 'tiktok') {
-                        $$(this.socialLinks)[4].click();    
-                        }  else if (link === 'youtube') {
-                            $$(this.socialLinks)[5].click();    
-                            };
+        } else if (link === 't.me') {
+            $$(this.socialLinks)[3].click();    
+        } else if (link === 'tiktok') {
+            $$(this.socialLinks)[4].click();    
+        }  else if (link === 'youtube') {
+            $$(this.socialLinks)[5].click();    
+        };
         await browser.waitUntil(
             async () => (await browser.getTitle()),
             {
-                timeout: 5000, 
+                timeout: 5000 
             }
         );
         await browser.switchWindow(link)
