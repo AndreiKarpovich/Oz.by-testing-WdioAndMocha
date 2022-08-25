@@ -31,5 +31,4 @@ describe('Functionality check on main page', () => {
         const url = await browser.getUrl();  
         expect(url).toContain('tiktok')
     });
-
 })

@@ -3,11 +3,9 @@ exports.config = {
     specs: [
         './test/specs/**/*.js'
     ],
-        exclude: [  
-    ],
     maxInstances: 10,
     capabilities: [{
-        maxInstances: 5,
+        maxInstances: 4,
         browserName: 'chrome',
         acceptInsecureCerts: true,
         'goog:chromeOptions': {
@@ -30,13 +28,7 @@ exports.config = {
         ui: 'bdd',
         timeout: 60000
     },
-    
     before: function (capabilities, specs) {
         browser.maximizeWindow()
-    },
-    afterTest: async function(test, context, { error, result, duration, passed, retries }) {
-        if (!passed) {
-            await browser.takeScreenshot();
-        }
     },
 }

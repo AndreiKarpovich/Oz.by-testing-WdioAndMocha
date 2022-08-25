@@ -13,7 +13,6 @@ describe('Functionality check on product page', () => {
         await This.header.search('JavaScript с нуля');
         const title = await I.getTitle();
         const productName = await I.getElementText(This.product.productName);
-        console.log(productName)
         expect(title).toContain(productName);
     });
     it('Check that comment form  shoud be visible after click AddCommentButton', async () => {
@@ -29,6 +28,5 @@ describe('Functionality check on product page', () => {
         const comments = await I.getElementsArray(This.product.comments);
         const commentsDate  = await I.getElementsArray(This.product.commentsDate);
         await expect(comments).toHaveChildren(commentsDate);
-    });
-   
+    });  
 })
